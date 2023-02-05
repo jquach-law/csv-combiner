@@ -20,7 +20,7 @@ def check_file_type():
 
     for arg in sys.argv[1:]:
         if not arg.endswith(".csv"):
-            print(f"Error: Expected .csv file", file=sys.stderr)
+            print("Error: Expected .csv file", file=sys.stderr)
             sys.exit(1)
 
 
