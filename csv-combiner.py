@@ -4,21 +4,25 @@ import sys
 import pandas as pd
 
 """
-Convert .csv to dataframe
-Print to terminal
+Convert multiple .csv to dataframe
+Print to terminal or redirect with '>'
 
 Terminal execution:
-$ python csv-combiner.py ./fixtures/accessories.csv
+$ python csv-combiner.py ./fixtures/accessories.csv ./fixtures/clothing.csv
+$ python csv-combiner.py ./fixtures/accessories.csv ./fixtures/clothing.csv > combined.csv
 """
 
-# dataframe
-df = pd.read_csv(sys.argv[1])
+# empty dataframe
+list_of_frames = []
+for arg in sys.argv[1:]:
+    # dataframe
+    df = pd.read_csv(arg)
+    # basename column
+    df["filename"] = os.path.basename(arg)
+    # add dataframe to list
+    list_of_frames.append(df)
 
-# basename column
-df["filename"] = os.path.basename(sys.argv[1])
-
+# concat all dataframes
+result = pd.concat(list_of_frames, sort=False)
 # convert to csv
-df = df.to_csv(index=False)
-
-# print(df)
-sys.stdout.write(df)
+result.to_csv(sys.stdout, index=False)
