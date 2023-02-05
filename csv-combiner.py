@@ -1,5 +1,6 @@
-import sys
 import os
+import sys
+
 import pandas as pd
 
 """
@@ -14,7 +15,7 @@ $ python csv-combiner.py ./fixtures/accessories.csv
 df = pd.read_csv(sys.argv[1])
 
 # basename column
-df['filename'] = os.path.basename(sys.argv[1])
+df["filename"] = os.path.basename(sys.argv[1])
 
 # convert to csv
 df = df.to_csv(index=False)
