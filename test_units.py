@@ -50,7 +50,8 @@ def test_validate_csv_filename_01():
 
 
 def test_validate_csv_filename_02():
-    csv_combiner.argv = ["./fixtures/accessories.csv", "./fixtures/clothing.csv"]
+    csv_combiner.argv = [
+        "./fixtures/accessories.csv", "./fixtures/clothing.csv"]
     assert csv_combiner._validate_csv_filename() is True
 
 
