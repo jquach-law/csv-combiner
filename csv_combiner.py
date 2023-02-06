@@ -16,7 +16,7 @@ class CSVCombiner:
     def _validate_zero_argument(self):
         # Validate at least one argument is given
         if len(self.argv) <= 1:
-            raise ValueError(f"Error: Need at least 1 .csv file, 0 is given")
+            raise ValueError("Error: Need at least 1 .csv file, 0 is given")
         return True
 
     def _validate_csv_filename(self):

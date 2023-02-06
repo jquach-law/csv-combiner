@@ -2,8 +2,8 @@ import os
 
 import pandas as pd
 import pytest
-from pandas.testing import assert_frame_equal
 from csv_combiner import CSVCombiner
+from pandas.testing import assert_frame_equal
 
 csv_combiner = CSVCombiner()
 
