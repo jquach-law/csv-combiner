@@ -5,6 +5,11 @@ import pandas as pd
 
 
 class CSVCombiner:
+    """
+    CSVCombiner takes multiple .csv, checks for error, then combine and
+    pass to standard output. User can redirect output with '>'
+    """
+
     def __init__(self, arguments=sys.argv[1:]):
         self.argv = arguments
 
