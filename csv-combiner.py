@@ -3,7 +3,6 @@ import sys
 
 import pandas as pd
 
-
 """
 Convert multiple .csv to dataframe
 Print to terminal or redirect with '>'
