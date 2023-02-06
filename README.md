@@ -1,4 +1,4 @@
-# csv-combiner
+# CSV-Combiner
 CSVCombiner takes multiple .csv, checks for error, then combine and
 pass to standard output. User can redirect output with '>'.
 
@@ -16,6 +16,7 @@ Install requirements:
 ## Running the program
 To run (stdout):
 `python csv_combiner.py ./fixtures/accessories.csv ./fixtures/clothing.csv`
+
 To run (.csv)
 `python csv_combiner.py ./fixtures/accessories.csv ./fixtures/clothing.csv > combined.csv`
 
